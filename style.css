@@ -1,0 +1,40 @@
+/* Couple Animation Styling */
+.couple-animation {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    gap: 10px;
+    margin-bottom: 20px;
+    font-size: 50px; /* ရုပ်ပုံအရွယ်အစား */
+}
+
+.boy {
+    animation: moveBoy 2s ease-in-out infinite;
+}
+
+.girl {
+    animation: moveGirl 2s ease-in-out infinite;
+}
+
+.love-heart {
+    font-size: 30px;
+    opacity: 0;
+    animation: popHeart 2s ease-in-out infinite;
+}
+
+/* Animations Logic */
+@keyframes moveBoy {
+    0%, 100% { transform: translateX(0); }
+    50% { transform: translateX(15px); } /* ကောင်လေးက ကောင်မလေးဆီ တိုးသွားမယ် */
+}
+
+@keyframes moveGirl {
+    0%, 100% { transform: translateX(0); }
+    50% { transform: translateX(-15px); } /* ကောင်မလေးက ကောင်လေးဆီ တိုးလာမယ် */
+}
+
+@keyframes popHeart {
+    0%, 40% { opacity: 0; transform: scale(0.5) translateY(0); }
+    50% { opacity: 1; transform: scale(1.5) translateY(-20px); } /* အသည်းပုံလေး ပေါ်လာမယ် */
+    100% { opacity: 0; transform: scale(1) translateY(-40px); }
+}
